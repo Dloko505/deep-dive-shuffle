@@ -1,1 +1,1 @@
-typeSearchIndex = [{"p":"edu.cnm.deepdive","l":"ArrayShuffles"}]
+typeSearchIndex = [{"p":"edu.cnm.deepdive","l":"ArrayShuffles"},{"p":"edu.cnm.deepdive","l":"Test"}]

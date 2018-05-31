@@ -9,6 +9,67 @@ import java.util.Random;
  * @version 0.1
  */
 public class ArrayShuffles {
+
+  /**
+   * Shuffle deck with default source of randomness. Invokes {@link shuffle(boolean[] deck, Random rng)}
+   * @param deck  data array.
+   */
+  public static void shuffle(boolean[] deck) {
+    shuffle(deck, new Random());
+  }
+  /**
+   * Shuffles deck using Fisher-Yates algorithm, with specified source of randomness.
+   * @param deck  data array.
+   * @param rng  source of randomness.
+   */
+  public static void shuffle(boolean[] deck, Random rng) {
+    for (int i = deck.length - 1; i > 0; i--) {
+      int source = rng.nextInt(i + 1);
+      boolean temp = deck[i];
+      deck[i] = deck[source];
+      deck[source] = temp;
+    }
+  }
+  /**
+   * Shuffle deck with default source of randomness. Invokes {@link shuffle(char[] deck, Random rng)}
+   * @param deck  data array.
+   */
+  public static void shuffle(char[] deck) {
+    shuffle(deck, new Random());
+  }
+  /**
+   * Shuffles deck using Fisher-Yates algorithm, with specified source of randomness.
+   * @param deck  data array.
+   * @param rng  source of randomness.
+   */
+  public static void shuffle(char[] deck, Random rng) {
+    for (int i = deck.length - 1; i > 0; i--) {
+      int source = rng.nextInt(i + 1);
+      char temp = deck[i];
+      deck[i] = deck[source];
+      deck[source] = temp;
+    }
+  }
+  /**
+   * Shuffle deck with default source of randomness. Invokes {@link shuffle(short[] deck, Random rng)}
+   * @param deck  data array.
+   */
+  public static void shuffle(short[] deck) {
+    shuffle(deck, new Random());
+  }
+  /**
+   * Shuffles deck using Fisher-Yates algorithm, with specified source of randomness.
+   * @param deck  data array.
+   * @param rng  source of randomness.
+   */
+  public static void shuffle(short[] deck, Random rng) {
+    for (int i = deck.length - 1; i > 0; i--) {
+      int source = rng.nextInt(i + 1);
+      short temp = deck[i];
+      deck[i] = deck[source];
+      deck[source] = temp;
+    }
+  }
   /**
    * Shuffle deck with default source of randomness. Invokes {@link shuffle(int[] deck, Random rng)}
    * @param deck  data array.
@@ -17,7 +78,7 @@ public class ArrayShuffles {
     shuffle(deck, new Random());
   }
   /**
-   * Shuffles deck using FIisher-Yates algorithm, with specified source of randomness.
+   * Shuffles deck using Fisher-Yates algorithm, with specified source of randomness.
    * @param deck  data array.
    * @param rng  source of randomness.
    */
@@ -37,7 +98,7 @@ public class ArrayShuffles {
     shuffle(deck, new Random());
   }
   /**
-   * Shuffles deck using FIisher-Yates algorithm, with specified source of randomness.
+   * Shuffles deck using Fisher-Yates algorithm, with specified source of randomness.
    * @param deck  data array.
    * @param rng  source of randomness.
    */
@@ -50,66 +111,6 @@ public class ArrayShuffles {
     }
   }
   /**
-   * Shuffle deck with default source of randomness. Invokes {@link shuffle(boolean[] deck, Random rng)}
-   * @param deck  data array.
-   */ 
-  public static void shuffle(boolean[] deck) {
-    shuffle(deck, new Random());
-  }
-  /**
-   * Shuffles deck using FIisher-Yates algorithm, with specified source of randomness.
-   * @param deck  data array.
-   * @param rng  source of randomness.
-   */
-  public static void shuffle(boolean[] deck, Random rng) {
-    for (int i = deck.length - 1; i > 0; i--) {
-      int source = rng.nextInt(i + 1);
-      boolean temp = deck[i];
-      deck[i] = deck[source];
-      deck[source] = temp;
-    }
-  }
-  /**
-   * Shuffle deck with default source of randomness. Invokes {@link shuffle(short[] deck, Random rng)}
-   * @param deck  data array.
-   */ 
-  public static void shuffle(short[] deck) {
-    shuffle(deck, new Random());
-  }
-  /**
-   * Shuffles deck using FIisher-Yates algorithm, with specified source of randomness.
-   * @param deck  data array.
-   * @param rng  source of randomness.
-   */
-  public static void shuffle(short[] deck, Random rng) {
-    for (int i = deck.length - 1; i > 0; i--) {
-      int source = rng.nextInt(i + 1);
-      short temp = deck[i];
-      deck[i] = deck[source];
-      deck[source] = temp;
-    }
-  }
-  /**
-   * Shuffle deck with default source of randomness. Invokes {@link shuffle(char[] deck, Random rng)}
-   * @param deck  data array.
-   */ 
-  public static void shuffle(char[] deck) {
-    shuffle(deck, new Random());
-  }
-  /**
-   * Shuffles deck using FIisher-Yates algorithm, with specified source of randomness.
-   * @param deck  data array.
-   * @param rng  source of randomness.
-   */
-  public static void shuffle(char[] deck, Random rng) {
-    for (int i = deck.length - 1; i > 0; i--) {
-      int source = rng.nextInt(i + 1);
-      char temp = deck[i];
-      deck[i] = deck[source];
-      deck[source] = temp;
-    }
-  }
-  /**
    * Shuffle deck with default source of randomness. Invokes {@link shuffle(float[] deck, Random rng)}
    * @param deck  data array.
    */ 
@@ -117,7 +118,7 @@ public class ArrayShuffles {
     shuffle(deck, new Random());
   }
   /**
-   * Shuffles deck using FIisher-Yates algorithm, with specified source of randomness.
+   * Shuffles deck using Fisher-Yates algorithm, with specified source of randomness.
    * @param deck  data array.
    * @param rng  source of randomness.
    */
@@ -137,7 +138,7 @@ public class ArrayShuffles {
     shuffle(deck, new Random());
   }
   /**
-   * Shuffles deck using FIisher-Yates algorithm, with specified source of randomness.
+   * Shuffles deck using Fisher-Yates algorithm, with specified source of randomness.
    * @param deck  data array.
    * @param rng  source of randomness.
    */
@@ -145,6 +146,26 @@ public class ArrayShuffles {
     for (int i = deck.length - 1; i > 0; i--) {
       int source = rng.nextInt(i + 1);
       double temp = deck[i];
+      deck[i] = deck[source];
+      deck[source] = temp;
+    }
+  }
+  /**
+   * Shuffle deck with default source of randomness. Invokes {@link shuffle(T[] deck, Random rng)}
+   * @param deck  data array.
+   */ 
+  public static <T> void shuffle(T[] deck) {
+    shuffle(deck, new Random());
+  }
+  /**
+   * Shuffles deck using Fisher-Yates algorithm, with specified source of randomness.
+   * @param deck  data array.
+   * @param rng  source of randomness.
+   */
+  public static <T> void shuffle(T[] deck, Random rng) {
+    for (int i = deck.length - 1; i > 0; i--) {
+      int source = rng.nextInt(i + 1);
+      T temp = deck[i];
       deck[i] = deck[source];
       deck[source] = temp;
     }
